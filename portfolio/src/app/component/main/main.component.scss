@@ -1,0 +1,104 @@
+$transitionTime: 0.3s;
+
+//------------------------- CSS de Secciones en general -------
+.section {
+  height: 100vh;
+  color: white;
+}
+// -------------------------------------------------------------
+
+//-------------------------- Menu y transiciones de menu items -
+.menu {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+}
+
+.menuIcon {
+  opacity: 1;
+  transition: font-size $transitionTime;
+  margin-bottom: 0.5rem;
+}
+
+.menu:hover .menuOptions {
+  opacity: 1;
+  transition: opacity $transitionTime, font-size $transitionTime,
+    color $transitionTime;
+}
+
+.menu:hover .menuIcon {
+  font-size: 0.4rem;
+  transition: font-size $transitionTime;
+}
+
+.menuOptions {
+  opacity: 0;
+  font-size: 1.3rem;
+  color: grey;
+  transition: font-size $transitionTime, color $transitionTime,
+    opacity $transitionTime;
+  margin: 0.5rem;
+}
+
+.menuOptions:hover {
+  font-size: 1.8rem;
+  color: white;
+  transition: font-size $transitionTime, color $transitionTime;
+}
+// -------------------------------------------------------------
+
+//--------------------------------------------Titulo------------
+.title {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2.2rem;
+}
+
+// -------------------------------------------------------------
+
+// ---------------------- About me -----------------------------
+.aboutMe {
+  background-color: rgb(88, 45, 45);
+  margin: 0;
+  display: flex;
+  justify-content: left;
+  text-align: left;
+  font-size: 2.2rem;
+}
+
+.aboutMe p {
+  margin: 0;
+  margin-left: 10rem;
+  padding-top: 5rem;
+  width: 70%;
+}
+// -------------------------------------------------------------
+
+// -----------------------Programacion -------------------------
+.programacion {
+  background-color: rgb(38, 41, 80);
+  margin: 0;
+  display:block;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-size: 2.2rem;
+}
+
+.programacion p {
+  margin: 0;
+  padding-top: 5rem;
+  width: 70%;
+}
+// -------------------------------------------------------------
+
+// ----------------------- ZS Team -----------------------------
+.zsteam {
+  background-color: yellow;
+}
+// -------------------------------------------------------------

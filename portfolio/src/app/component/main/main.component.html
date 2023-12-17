@@ -1,0 +1,43 @@
+<div class="main">
+  <div class="menu">
+    <ul>
+      <li class="menuIcon">
+        <div>
+          <li>--------</li>
+          <li>--------</li>
+          <li>--------</li>
+        </div>
+      </li>
+      <li class="menuOptions">Bienvenida</li>
+      <!--TODO: No funciona goTo(id)-->
+      <li class="menuOptions" (click)="goTo('aboutMe')">Sobre mi</li>
+      <li class="menuOptions">Programacion</li>
+      <li class="menuOptions">Zs Team</li>
+    </ul>
+  </div>
+  <div class="title section">
+    <div>
+      <h1>¡{{ hello }}!, soy Agustin Ocampo</h1>
+      <h4>y te doy la bienvenida a mi portfolio</h4>
+    </div>
+  </div>
+  <div class="aboutMe section" id="aboutMe">
+    <p>
+      Mi nombre es <span>Agustin Ocampo</span> y tengo {{ anios }} años. <br />
+      Actualmente soy estudiante de la carrera de Ingenieria en Sistemas de
+      Informacion en la Universidad Teconologica Nacional, regional Buenos
+      Aires.
+    </p>
+  </div>
+  <div class="programacion section">
+    <p>
+      La programacion tambien ocupa parte de mis tiempos libres, me gusta utilizar las tecnologias 
+      para crear herramientas utiles, que agilicen o simplifiquen tareas. Tambien me gusta experimentar con los estilos.
+    </p>
+    <br>
+    <h2>Algunos de mis principales proyectos :</h2>
+    <div></div>
+  </div>
+  <div class="zsteam section"></div>
+  <div></div>
+</div>
