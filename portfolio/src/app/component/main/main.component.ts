@@ -19,6 +19,7 @@ export class MainComponent implements OnInit {
   ];
   hello: string = this.helloInLanguages[0];
   anios: number = 22;
+  blobNumber = 3;
 
   ngOnInit(): void {
     this.translateHello();
@@ -46,9 +47,9 @@ export class MainComponent implements OnInit {
   }
 
   bounceBlobs() {
-    moveBlob("blob1");
-    moveBlob("blob2");
-    moveBlob("blob3");
+    for(var i = 0; i < this.blobNumber + 1; i++){
+      moveBlob(`blob${i}`)
+    }
   }
 }
 
@@ -70,25 +71,10 @@ function moveBlob(blobNumber:string){
   const FPS = 60;
   section.style.height = window.innerHeight + 'px';
   section.style.width = window.innerWidth + 'px';
-  let xPosition = 0;
-  let yPosition = 0;
-
 
   // Logo moving velocity Variables
-  switch(blobNumber){
-    case "blob1":
-      xPosition = 10;
-      yPosition = 10;
-      break;
-    case "blob2":
-      xPosition = 250;
-      yPosition = 300;
-      break;
-    case "blob3":
-      xPosition = 800;
-      yPosition = 180;
-  }
-  
+  let xPosition = Math.floor(Math.random() * 800);
+  let yPosition = Math.floor(Math.random() * 300);
   let xSpeed = 4;
   let ySpeed = 4;
 
