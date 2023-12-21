@@ -1,6 +1,17 @@
+//FontsFamilies Index
+//font-family: 'Maven Pro', sans-serif;
+//font-family: 'Nunito Sans', sans-serif;
+
+$maven: "Maven Pro", sans-serif;
+$nunitoSans: "Nunito Sans", sans-serif;
+
 $transitionTime: 0.3s;
 
 //------------------------- CSS de Secciones en general -------
+.main {
+  font-family: $maven;
+}
+
 .section {
   height: 100vh;
   color: white;
@@ -14,12 +25,23 @@ $transitionTime: 0.3s;
   top: 50%;
   transform: translateY(-50%);
   color: white;
+  z-index: 2;
+}
+
+.menu li {
+  list-style: none;
 }
 
 .menuIcon {
   opacity: 1;
   transition: font-size $transitionTime;
   margin-bottom: 0.5rem;
+  font-size: 3rem;
+  background-color: rgb(93, 5, 165,0.6);
+  border-radius: 3rem;
+  box-shadow: 0px 0px 30px 8px rgb(93, 5, 165);
+  /* in order: x offset, y offset, blur size, spread size, color */
+  /* blur size and spread size are optional (they default to 0) */
 }
 
 .menu:hover .menuOptions {
@@ -29,7 +51,7 @@ $transitionTime: 0.3s;
 }
 
 .menu:hover .menuIcon {
-  font-size: 0.4rem;
+  font-size: 1rem;
   transition: font-size $transitionTime;
 }
 
@@ -57,6 +79,46 @@ $transitionTime: 0.3s;
   align-items: center;
   text-align: center;
   font-size: 2.2rem;
+  font-family: $nunitoSans;
+}
+
+.title h4 {
+  font-weight: 200;
+}
+
+#helloText {
+  transition: opacity 0.5s;
+}
+
+.blobContainer {
+  position: absolute;
+  height: 100vh;
+}
+
+.blob {
+  position: absolute;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  border-radius: 50%;
+  opacity: 9%;
+}
+
+#blob1 {
+  background-color: rgb(24, 3, 216);
+  width: 10rem;
+  height: 10rem;
+}
+
+#blob2 {
+  background-color: white;
+  width: 20rem;
+  height: 20rem;
+}
+
+#blob3 {
+  background-color: rgb(138, 30, 253);
+  width: 30rem;
+  height: 30rem;
 }
 
 // -------------------------------------------------------------
@@ -83,7 +145,7 @@ $transitionTime: 0.3s;
 .programacion {
   background-color: rgb(38, 41, 80);
   margin: 0;
-  display:block;
+  display: block;
   justify-content: center;
   text-align: center;
   align-items: center;

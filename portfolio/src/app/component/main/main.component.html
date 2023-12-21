@@ -1,24 +1,27 @@
 <div class="main">
   <div class="menu">
     <ul>
-      <li class="menuIcon">
-        <div>
-          <li>--------</li>
-          <li>--------</li>
-          <li>--------</li>
-        </div>
+      <li>
+        <i class="fa-solid fa-bars menuIcon" style="color: white"></i>
       </li>
-      <li class="menuOptions">Bienvenida</li>
-      <!--TODO: No funciona goTo(id)-->
+      <li class="menuOptions" (click)="goTo('title')">Bienvenida</li>
       <li class="menuOptions" (click)="goTo('aboutMe')">Sobre mi</li>
-      <li class="menuOptions">Programacion</li>
-      <li class="menuOptions">Zs Team</li>
+      <li class="menuOptions" (click)="goTo('programacion')">Programacion</li>
+      <li class="menuOptions" (click)="goTo('zsteam')">ZS Team</li>
     </ul>
   </div>
-  <div class="title section">
+  <div class="title section" id="title">
     <div>
-      <h1>¡{{ hello }}!, soy Agustin Ocampo</h1>
-      <h4>y te doy la bienvenida a mi portfolio</h4>
+      <h1 class="welcomeText">
+        <span id="helloText">{{ hello }}</span
+        ><br />soy Agustin Ocampo
+      </h1>
+      <h4>y te doy la bienvenida a mi portfolio.</h4>
+    </div>
+    <div class="blobContainer" id="blobContainer">
+      <div class="blob" id="blob1">.</div>
+      <div class="blob" id="blob2">.</div>
+      <div class="blob" id="blob3">.</div>
     </div>
   </div>
   <div class="aboutMe section" id="aboutMe">
@@ -29,15 +32,16 @@
       Aires.
     </p>
   </div>
-  <div class="programacion section">
+  <div class="programacion section" id="programacion">
     <p>
-      La programacion tambien ocupa parte de mis tiempos libres, me gusta utilizar las tecnologias 
-      para crear herramientas utiles, que agilicen o simplifiquen tareas. Tambien me gusta experimentar con los estilos.
+      La programacion tambien ocupa parte de mis tiempos libres, me gusta
+      utilizar las tecnologias para crear herramientas utiles, que agilicen o
+      simplifiquen tareas. Tambien me gusta experimentar con los estilos.
     </p>
-    <br>
+    <br />
     <h2>Algunos de mis principales proyectos :</h2>
     <div></div>
   </div>
-  <div class="zsteam section"></div>
+  <div class="zsteam section" id="zsteam"></div>
   <div></div>
 </div>
